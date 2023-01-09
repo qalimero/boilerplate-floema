@@ -48,7 +48,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.locals.basedir = app.get('views');
 
 const handleRequest = async (api) => {
-  const [ home, about, { results: collection }] = await Promise.all([
+  const [ home, about, { results: collections }] = await Promise.all([
     api.getSingle('home'),
     api.getSingle('about'),
     api.query(Prismic.predicate.at('document.type', 'collection'), {
@@ -82,7 +82,7 @@ const handleRequest = async (api) => {
 
   return {
     home,
-    collection,
+    collections,
     about,
   };
 };
