@@ -1,0 +1,23 @@
+/*
+ *  ## - Colors Variables
+ * __________________________________________________
+ */
+
+$color-white: #fff;
+$color-black: #000;
+
+/*
+ *  ## - Fonts Variables
+ * __________________________________________________
+ */
+
+$font-george-x: 'George X';
+$font-suisse-bp: 'Suisse BP';
+
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+$z-indexes:(
+  'navigation',
+  'content'
+);
+

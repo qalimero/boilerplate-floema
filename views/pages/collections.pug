@@ -1,0 +1,27 @@
+extends ../_includes/layout
+
+block variables
+  - const template = 'collections'
+
+block content
+  .collection
+    .collection__wrapper
+      .collection__titles
+        each collection, index in collections
+          .collection__titles__label=`${home.data.collection} ${Numbers(index)}`
+          .collection__titles__title=collection.data.title
+
+        .collection__gallery
+          .collection__gallery__wrapper
+            each collection in collections
+              each product in collection.data.products
+                a.collection__gallery__link(href=Link(product.products_product))
+                  figure.collection__gallery__media
+                    img.collection__gallery__media__image(alt=product.products_product.data.image.alt src=product.products_product.data.image.url)
+
+        .collection__content
+          each collection in collections
+            article.collection__article
+            h2.collection__article__title=`${collection.data.title} ${home.data.collection}`
+            p.collection__article__description=collection.data.description
+
