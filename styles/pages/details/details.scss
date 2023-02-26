@@ -1,39 +1,79 @@
 .detail{
+  @extend %cover;
+  @extend %center;
+  &__wrapper {
+  display: flex;
+  align-items: center;
+    .detail__media{
+      position: relative;
+      width: 78.2rem;
+      height: 55.4rem;
+      &__image {
+        @extend %cover;
+        object-fit: cover;
+      }
+    }
+    .detail__information{
+      padding-left: 8.2rem;
 
+      &__collection {
+        @extend %description-12;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+      }
+      &__title {
+        @extend %title-120;
+        max-width: 60rem;
+      }
+
+      &__content {
+        padding-left: 18rem;
+      }
+      &__highlights {
+        margin-top: 5rem;
+
+        .detail__information__highlight {
+          display: flex;
+          align-items: center;
+
+          &:not(:first-child) {
+            margin-top: 4rem;
+          }
+
+          &__icon {
+            height: 4rem;
+            width: 4rem;
+            margin-right: 4rem;
+          }
+          &__text {
+            @extend %description-16;
+          }
+        }
+      }
+      &__list{
+        margin-top: 4rem;
+
+        .detail__information__item {
+          display: flex;
+          align-items: center;
+          &:not(:first-child) {
+            margin-top: 4rem;
+          }
+          &__title {
+            @extend %description-12;
+          }
+        }
+      }
+      &__link {
+        @extend %title-30;
+        margin-top: 3rem;
+      }
+    }
+  }
 }
-.detail__wrapper{
 
-}
-.detail__media{
-
-}
-.detail__media__image{
-
-}
-
-.detail__information{
-
-}
-.detail__information__collection{
-
-}
-
-.detail__information__collection__title{
-
-}
-
-.detail__information__content{
-
-}
-.detail__information__highlights{
-
-}
-
-.detail__information__highlight{
-
-}
 .highlights_icon{
-
+  font-size: 10px;
 }
 
 .detail__information__highlight__icon{
@@ -44,23 +84,7 @@
 
 }
 
-.detail__information__highlight__text{
 
-}
-
-.detail__information__list{
-
-}
-.detail__information__item{
-
-}
-.detail__information__item__title{
-
-}
 .detail__information__item__description{
-
-}
-
-.detail__information__link{
 
 }

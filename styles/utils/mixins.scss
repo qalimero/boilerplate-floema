@@ -4,7 +4,12 @@
   top: 0;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+}
+
+%center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 @mixin ratio($height, $width) {
