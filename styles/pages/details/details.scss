@@ -1,13 +1,16 @@
 .detail{
   @extend %cover;
   @extend %center;
+
+  background: $color-quicksand;
+  color: $color-white;
   &__wrapper {
   display: flex;
   align-items: center;
     .detail__media{
       position: relative;
-      width: 78.2rem;
-      height: 55.4rem;
+      height: 78.2rem;
+      width: 55.4rem;
       &__image {
         @extend %cover;
         object-fit: cover;
@@ -55,17 +58,26 @@
 
         .detail__information__item {
           display: flex;
-          align-items: center;
           &:not(:first-child) {
             margin-top: 4rem;
           }
           &__title {
             @extend %description-12;
+
+            padding-right: 2.5rem;
+            width: 10rem;
+          }
+          &__description {
+            @extend %description-16;
+
+            max-width: 44rem;
           }
         }
       }
       &__link {
         @extend %title-30;
+
+        display: inline-block;
         margin-top: 3rem;
       }
     }
@@ -84,7 +96,3 @@
 
 }
 
-
-.detail__information__item__description{
-
-}
